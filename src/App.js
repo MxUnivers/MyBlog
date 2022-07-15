@@ -6,6 +6,10 @@ import DetailsArticle from './pages/DetailsArticle';
 import ListArticles from './pages/ListArticles';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Post from './backOffice/Post';
+import ArticleOnline from './backOffice/ArticleOnline';
+import BackOffice from './backOffice/BackOffice';
+import Edit from './backOffice/Edit';
 
 function App() {
   return (
@@ -17,6 +21,11 @@ function App() {
           <Route path="/" element={<Home/>} />
           <Route path="/list-articles" element={<ListArticles/>} />
           <Route path="/detail/id:" element={<DetailsArticle/>} />
+          <Route path="back-office" element={<BackOffice/>} >
+              <Route path="post" element={<Post />} />
+              <Route path="online" element={<ArticleOnline />} />
+              <Route path="edit-article/id:" element={<Edit/>} />
+          </Route>
         </Routes>
         <Footer/>
       </Router>
