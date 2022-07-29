@@ -84,4 +84,5 @@ const MoreArticles = () => {
   )
 }
 
-export default MoreArticles
+
+export default MoreArticles;

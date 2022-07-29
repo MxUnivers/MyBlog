@@ -1,4 +1,5 @@
-import React from 'react'
+
+import React from 'react';
 import ArticleView from '../components/DetailsArticle/ArticleView';
 import MoreArticles from '../components/DetailsArticle/MoreArticles';
 
@@ -31,5 +32,7 @@ const DetailsArticle = () => {
     </div>
   )
 }
+
+
 
 export default DetailsArticle;

@@ -1,4 +1,5 @@
 
+
 import React , {useState} from "react";
 import  {Link} from  "react-router-dom";
 import {FiDelete} from  "react-icons/fi";
@@ -9,7 +10,6 @@ import {AiOutlineWarning} from  "react-icons/ai";
 
 const ArticleOnline = () => {
  var articleEdit;
- var articleDelete ;
 
  const [del , setdel] = useState(false);
 
@@ -83,7 +83,7 @@ const ArticleOnline = () => {
                               articles.map((article) =>
                                   <tr className="rounded bg-white  hover:bg-gray-200 text-gray-900 py-3 space-y-1 border-b border-gray-900">
                                       <th className="px-3 py-5 mx-2 text-xl"><input type="checkbox" className="text-blue-600 bg-blue-500 h-5 w-5" /></th>
-                                      <th className="px-3 py-5 mx-2 text-xl"><label className=""><img className=" w-full " src={article.coverPicture} /></label></th>
+                                      <th className="px-3 py-5 mx-2 text-xl"><label className=""><img className=" w-full " src={article.coverPicture} alt="s" /></label></th>
                                       <th className="px-3 py-5 mx-2 text-xl"><label className="">{article.title}</label></th>
                                       <th className="px-3 py-5 mxs-2 text-xl"><p className="">{article.description}</p></th>
                                       <th className="px-3 py-5 mx-2 text-xl"><label className="">{article.category}</label></th>
@@ -104,7 +104,7 @@ const ArticleOnline = () => {
                                           
 
                                           {/* Modal Delete */}
-                                          <div style={{visibility:del == true ? "visible" : "hidden" ,  opacity: del == true ?"1" : "0" }} className="fixed z-3 top-0 right-0 conatiner-fluid w-full h-full flex justify-center items-center p-3 bg-gradient-to-t from-black to-transparent transition duration-700 ease-in-out ">
+                                          <div style={{visibility:del === true ? "visible" : "hidden" ,  opacity: del === true ?"1" : "0" }} className="fixed z-3 top-0 right-0 conatiner-fluid w-full h-full flex justify-center items-center p-3 bg-gradient-to-t from-black to-transparent transition duration-700 ease-in-out ">
                                             <div className="relative bg-white px-3 py-3 rounded-lg">
                                             <div className=" shafow-4xl  flex flex-col justify-center border-b border-gray-500 py-2">
                                                   <h3 className="text-2xl flex justify-center items-center "><AiOutlineWarning className="h-10 w-10 text-red-700 font-bold" /> Suppresion d'article en question ?</h3>
@@ -113,7 +113,7 @@ const ArticleOnline = () => {
                                               <div className="flex flex-col justify-center ">
                                                  <div className=" w-full flex flex-col sm:flex-row md:flex-row lg:flex-row justify-center items-center ">
                                                           <div className="w-full flex  justify-center">
-                                                              <img src={article.coverPicture} className="h-[20%] w-[50%]" />
+                                                              <img src={article.coverPicture} className="h-[20%] w-[50%]" alt="sa" />
                                                           </div>
                                                           <div className="w-full h-[300px] overflow-y-scroll px-3 border ">
                                                               <div className="w-full ">

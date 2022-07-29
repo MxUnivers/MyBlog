@@ -1,3 +1,4 @@
+
 import React from 'react'
 import  {Link} from  "react-router-dom"
 import  {FaFacebookF} from  "react-icons/fa";
@@ -86,7 +87,10 @@ const ArticleView = () => {
 
           <div className=" flex-col justify-items-start text- py-3 pt-full mb-10">
             <h3 className="text-xl">Contenu créer par <span className="font-bold">In Studio</span></h3>
+
               <div className="text-start justify-items-start mt-10">
+                
+                
                 {/* post commentaire */}
                 <div className=" text-left">
                   <form>
@@ -102,6 +106,8 @@ const ArticleView = () => {
                 </div>
                 {/* bouton de chragement des commentaires */}
                 <button type="button"  className=" bg-blue-500 text-white rounded mx-[7%]  text-2xl my-5 mt-2 py-3 px-4">charger les commentaires</button>
+
+            
                 <div className="container rounded py-3 my-3 px-3 shadow-lg bg-white flex-col justify-items-center">
                   <div classname="flex flex-col">
                      {/* espace commataire */}
@@ -125,37 +131,12 @@ const ArticleView = () => {
                      </div>
                   </div>
                 </div>
+
               </div>
           </div>
-
-          {/* les autres articles */}
-
-          <div className="container-fluid py-3 pt-4  mt-10  border-t border-double border-gray-700">
-            <div className="py-3 px-3 ">
-              <h3>autres contenus</h3>
-            </div>
-            <div className="py-2 px-1 grid grid-cols-2 divide-x gap-5">
-                {
-                  paragrphe.map(paragrph=>{
-                    return(
-                      <div className="">
-                        <img className="w-full" src="https://th.bing.com/th/id/OIP.JhVsGkreCX4-QIcbbT8BmwHaEK?pid=ImgDet&rs=1" />
-                        <div className="py-2 mt-1">
-                          <h2 className="text-left text-xl font-bold">
-                            {"<<Alerte Rouge >>"} l'un des film qui a le plus cartoné .
-                          </h2>
-                        </div>
-                      </div>
-                    )
-                  })
-                }
-            </div>
-          </div>
-
-
-
         </div>
   )
 }
+
 
 export default ArticleView ;

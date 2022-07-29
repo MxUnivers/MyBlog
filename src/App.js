@@ -15,13 +15,14 @@ import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-sans">
 
       <Router>     
         <Navbar/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/home" element={<LandingPage/>} />
+
           <Route path="/list-articles" element={<ListArticles/>} />
           <Route path="/detail/id:" element={<DetailsArticle/>} />
           <Route path="back-office" element={<BackOffice/>} >
